@@ -13,6 +13,14 @@ div = soup.find("div",{"class":"css-1jiha5s"})
 ds = div.find_all("div",{"class":"gc-thumbnail-type-seller-card-wrapper css-1u8qly9"})
 img = ds[0].img["src"]
 print(img)
+title = ds[0].find("h3",{"class":"gc-thumbnail-type-seller-card-title css-1gxx2ac"}).text.strip()
+print(title)
+rating = float(ds[0].find("span",{"class":"css-9ml4lz"}).text.strip())
+print(rating)
+ratingCount = int(ds[0].find("span",{"class":"css-oj6onp"}).text.strip().split(" ")[0].strip().replace(",",""))
+print(ratingCount)
+price = int(ds[0].find("span",{"class":"css-5r5920"}).text.strip().replace(",",""))
+print(price)
 
 
 # 이미지 링크 가져오기
