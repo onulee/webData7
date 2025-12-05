@@ -1,8 +1,8 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
-options = Options()
-options.add_argument("user-data-dir=C:/Users/USER/AppData/Local/Google/Chrome/User Data")
+options = Options() 
+options.add_argument("user-data-dir=C:/Users/KOSMO/AppData/Local/Google/Chrome/User Data/Default")
 options.add_argument("profile-directory=Default")
 
 driver = webdriver.Chrome(options=options)
